@@ -1,34 +1,44 @@
-// Muutuja
-// var, let, const
-// Deklareerimine
+// Andmetuubid
 
-//let name = "paks beps" ;
-//console.log(name);
-//name = "Skinny Nef" ;
-//console.log(name);
+// Primitiivid
+// String
+const name = "Beps" ;
+console.log(typeof name);
 
-// Lubatud margid nime loomisel - tahed, numbrid, _, $.
-//numbriga muutuja nimi ei tohi!
+// Number
+const number = 17;
+console.log(typeof number);
 
-//let $ = "dolts" ;
-//console.log($);
+//Percent
+const persent = 50.3;
+console.log(typeof persent);
 
-//const name = "nef" ;
-//console.log(name);
-// Const ei saa muuta vaartust
-//name = "Chris";
+//boolean
+const tunnis = "true"
+console.log(typeof tunnis);
 
-// Massiivid
-const Numbers = [1, 2, 3, 4, 5];
-Numbers.push(6);
-console.log(Numbers);
+//Null
+const airplane = null;
+console.log(typeof airplane);
 
-// Objektid
-const person ={
-	name: "Kadi" ,
-	age: 32
+//Undefinied
+const test;
+console.log(typeof test);
+
+//Symbol
+const sym = Symbol();
+console.log(typeof sym);
+
+//Object
+const hobbies = ["games", "music"];
+console.log(typeof hobbies);
+
+const person = {
+	name: "Zapz"
+	age: 16
 };
+console.log(typeof person);
 
-person.name = "Kati" ,
-person.age = 13
-console.log(person);
+const date = new Date();
+console.log(typeof date);
+console.log(date);
