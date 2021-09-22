@@ -1,45 +1,45 @@
-// Andmetuubid
+let val;
 
-// Primitiivid
-// String
-const name = "Beps" ;
-console.log(typeof name);
+// Number to String
+val = String(555);
+val = String(4+4);
+val = String(5.6);
 
-// Number
-const number = 17;
-console.log(typeof number);
+// Boolean to String
+val = String(true);
+val = String(false);
 
-//Percent
-const persent = 50.3;
-console.log(typeof persent);
+//Objekt to String
+val = String(new Date());
 
-//boolean
-const tunnis = "true"
-console.log(typeof tunnis);
+//Massiiv to String
+val = String([1, 3, 5]);
 
-//Null
-const airplane = null;
-console.log(typeof airplane);
+//To String
+val = (5).toString();
+val = (true).toString();
 
-//Undefinied
-let test;
-console.log(typeof test);
 
-//Symbol
-const sym = Symbol();
-console.log(typeof sym);
+//String to Number
+val = Number("5");
 
-//Object
-const hobbies = ["games", "music"];
-console.log(typeof hobbies);
+//Boolean to Number
+val = Number(true);
 
-const person = {
-	name: "Zapz" ,
-	age: 16
-};
+//null to number
+val = Number(null);
 
-console.log(typeof person);
+//tekst to Number
+val = Number("paks chris");
 
-const date = new Date();
-console.log(typeof date);
-console.log(date);
+// Massiiv to number 
+val = Number([1, 2, 3]);
+
+//String to Number
+val = parseInt('100.30');
+val = parseFloat('100.30');
+
+
+
+console.log(typeof val);
+console.log(val);
