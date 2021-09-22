@@ -22,7 +22,7 @@ const airplane = null;
 console.log(typeof airplane);
 
 //Undefinied
-const test;
+let test;
 console.log(typeof test);
 
 //Symbol
@@ -34,9 +34,10 @@ const hobbies = ["games", "music"];
 console.log(typeof hobbies);
 
 const person = {
-	name: "Zapz"
+	name: "Zapz" ,
 	age: 16
 };
+
 console.log(typeof person);
 
 const date = new Date();
