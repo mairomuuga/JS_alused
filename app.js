@@ -1,46 +1,45 @@
-//const id = 100
-//let testid;
+/*const color = 'yellow';
 
-// == v6rdub
-// != ei v6rdu
-// === v6rdub ja toimub tyybikontroll
-// !== ei v6rdu ja toimub tyybikontroll
-
-
-
-//if (typeof testid !== 'undefined'){
-//	console.log(`ID on ${id} - suurem kui 100 `);
-//}else{
-//	console.log(`ID on ${id} - v2iksem v6i v6rdne 100ga`);
-//}
-//
-//console.log(typeof testid);
-//
-//const color = "green";
-//
-//if(color === "green"){
-//	console.log(`kyta gaasi`);
-//}else if(color === 'yellow'){
-//	console.log('j22 seisma duhas');
-//}else if(color === 'red'){
-//	console.log('PIDURRRRR');
-//}else{
-//	console.log('seda v2rvi pole olemas valgusfooris');
-//}
-//
-const name = "Katjusha";
-const age = 19;
-
-if(age > 0 && age <= 12){
-	console.log(`${name} on taun`);
-}else if(age > 12 && age <=18){
-	console.log(`${name} a sen norm vanus`);
-}else if(age > 18 && age <=30){
-	console.log(`${name} kannatab timmida kyll`);
+switch(color){
+	case 'red':
+		console.log('Stop');
+		break;
+	case 'yellow':
+		console.log('Lisa gaasi');
+		break;
+	case 'Green':
+		console.log('S6ida aga');
+		break;
+	default:
+		console.log('Color not accepted');
+		break;
 }
-
-if(age <= 18 || age > 65){
-	console.log(`${name} ei saa registreerida`);
-}else{
-	console.log(`${name} saab registreerida`);
+*/
+let paev;
+const today = new Date();
+paev = today.getDay();
+	case '0':
+		console.log('Pyhap2ev');
+		break;
+	case '1':
+		console.log('Esmasp2ev');
+		break;
+	case '2':
+		console.log('Teisip2ev');
+		break;
+	case '3':
+		console.log('Kolmap2ev');
+		break;
+	case '4':
+		console.log('Neljap2ev');
+		break;
+	case '5':
+		console.log('Reede');
+		break;
+	case '6':
+		console.log('Laup2ev');
+		break;
+		default:
+		console.log('pole sellist n2dalap2eva');
+		break;
 }
