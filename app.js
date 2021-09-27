@@ -11,8 +11,7 @@ const person = {
 	},
 	getBirthYear: function(){
 		return 2021 - this.age;
-	};
-
+	}
 };
 
 let val;
@@ -26,13 +25,13 @@ val = person.address['city'];
 val = person.getBirthYear();
 
 const people = [
-	(name: 'Kati', age: 35),
-	(name: '6ix9ine', age: 50),
-	(name: 'TayK', age: 69)
+	{name: 'Kati', age: 35},
+	{name: '6ix9ine', age: 50},
+	{name: 'TayK', age: 69}
 ];
 
-val - people;
-for(let i = 0; 1 < people.length; i++){
+val = people;
+for(let i = 0; i < people.length; i++){
 	console.log(people[i].name);
 }
 console.log(val);
