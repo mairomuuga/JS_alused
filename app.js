@@ -1,45 +1,17 @@
-/*const color = 'yellow';
-
-switch(color){
-	case 'red':
-		console.log('Stop');
-		break;
-	case 'yellow':
-		console.log('Lisa gaasi');
-		break;
-	case 'Green':
-		console.log('S6ida aga');
-		break;
-	default:
-		console.log('Color not accepted');
-		break;
-}
-*/
-let paev;
-const today = new Date();
-paev = today.getDay();
-	case '0':
-		console.log('Pyhap2ev');
-		break;
-	case '1':
-		console.log('Esmasp2ev');
-		break;
-	case '2':
-		console.log('Teisip2ev');
-		break;
-	case '3':
-		console.log('Kolmap2ev');
-		break;
-	case '4':
-		console.log('Neljap2ev');
-		break;
-	case '5':
-		console.log('Reede');
-		break;
-	case '6':
-		console.log('Laup2ev');
-		break;
-		default:
-		console.log('pole sellist n2dalap2eva');
-		break;
-}
+let val;
+val=document.getElementById("task-title");
+const taskTitle=document.getElementById("task-title");
+taskTitle.style.background = "#fffff";
+taskTitle.style.color = "#000000";
+taskTitle.style.padding = "5px";
+taskTitle.style.display = "1";
+//taskTitle.textContent = "MINU ÜLESANDED :)"
+//taskTitle.innerText = "tglt ei ole"
+taskTitle.innerHTML = '<span style="color:red";">asjad</span>'
+val=document.querySelector("#task-title");
+val=document.querySelector(".card-title");
+val=document.querySelector("h2");
+document.querySelector('li').style.color="red";
+document.querySelector("ul li").style.color="yellow";
+document.querySelector("li:nth-child(even)").style.background="#ccc";
+console.log(val);
