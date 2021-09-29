@@ -1,17 +1,29 @@
 let val;
-val=document.getElementById("task-title");
-const taskTitle=document.getElementById("task-title");
-taskTitle.style.background = "#fffff";
-taskTitle.style.color = "#000000";
-taskTitle.style.padding = "5px";
-taskTitle.style.display = "1";
-//taskTitle.textContent = "MINU ÜLESANDED :)"
-//taskTitle.innerText = "tglt ei ole"
-taskTitle.innerHTML = '<span style="color:red";">asjad</span>'
-val=document.querySelector("#task-title");
-val=document.querySelector(".card-title");
-val=document.querySelector("h2");
-document.querySelector('li').style.color="red";
-document.querySelector("ul li").style.color="yellow";
-document.querySelector("li:nth-child(even)").style.background="#ccc";
+
+const list=document.querySelector('ul');
+const listItem=document.querySelector('li:first-child');
+
+val=list;
+val=listItem;
+
+val=list.childNodes;
+val=list.childNodes[0].nodeName;
+val=list.childNodes[0].nodeType;
+val=list.children;
+val=list.children[1];
+list.children[1].textContent = 'Study XML';
+val=list.children[2].children;
+list.children[2].children[0].id="test-id";
+val=list.firstChild;
+val=list.firstElementChild;
+val=list.lastChild;
+val=list.lastElementChild;
+val=list.childElementCount;
+val=listItem.parentNode;
+val=listItem.parentElement;
+val=listItem.parentElement.parentElement;
+val=listItem.nextSibling;
+val=listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+
+
 console.log(val);
