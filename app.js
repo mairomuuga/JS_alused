@@ -1,22 +1,34 @@
-const form = document.querySelector("form");
-const taskInput = document.querySelector("#task");
-const heading = document.querySelector("h4");
+const form=document.querySelector("form");
+const taskInput=document.querySelector("#task");
+const heading=document.querySelector("h4");
+const li=document.createElement("li");
+const list=document.querySelector("ul");
 
-taskInput.value= "";
+li.className="collection-item";
 
-//form.addEventListener("submit", runEvent);
+taskInput.value = "";
+
+form.addEventListener("submit", addTask);
 //taskInput.addEventListener("keydown", runEvent);
 //taskInput.addEventListener("keyup", runEvent);
 //taskInput.addEventListener("keypress", runEvent);
-taskInput.addEventListener("focus", runEvent);
-taskInput.addEventListener("blue", runEvent);
+//taskInput.addEventListener("focus", runEvent);
+//taskInput.addEventListener("blur", runEvent);
+//taskInput.addEventListener("cut", runEvent);
+//taskInput.addEventListener("paste", runEvent);
+//taskInput.addEventListener("input", runEvent);
 
+function addTask(e){
+	//body...
 
-
-function runEvent(e) {
-	//body.....
-	console.log(`Event type: ${e.type}`);
-	//console.log(e.target.value);
-	heading.innerText=e.target.value;
-	//e.preventDefault();
-}
+	//
+	li.appendChild(document.createTextNode(taskInput.value));
+	const link=document.createElement("a");
+	link.className="secondary-content";
+	link.appendChild(document.createTextNode("X"));
+	link.setAttribute("href", "#");
+	li.appendChild(link);
+	list.appendChild(li);
+	//console.log(li);
+	e.preventDefault();
+}	
