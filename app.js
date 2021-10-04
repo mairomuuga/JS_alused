@@ -1,16 +1,22 @@
-//elemendi loomine
-const li =document.createElement('li');
-const list=document.querySelector("ul");
-//klassi m22ramine
-li.className="collection-item";
-li.appendChild(document.createTextNode("P22sta mati vangist!"));
-const link = document.createElement("a");
-link.className="secondary-content";
-link.appendChild(document.createTextNode("X"));
-//lisa atribuut v22rtusega
-link.setAttribute("href", "#");
-li.appendChild(link);
-//elemendi lisamine teise elemendi sisse
-list.appendChild(li);
-	
-console.log(li);
+const form = document.querySelector("form");
+const taskInput = document.querySelector("#task");
+const heading = document.querySelector("h4");
+
+taskInput.value= "";
+
+//form.addEventListener("submit", runEvent);
+//taskInput.addEventListener("keydown", runEvent);
+//taskInput.addEventListener("keyup", runEvent);
+//taskInput.addEventListener("keypress", runEvent);
+taskInput.addEventListener("focus", runEvent);
+taskInput.addEventListener("blue", runEvent);
+
+
+
+function runEvent(e) {
+	//body.....
+	console.log(`Event type: ${e.type}`);
+	//console.log(e.target.value);
+	heading.innerText=e.target.value;
+	//e.preventDefault();
+}
