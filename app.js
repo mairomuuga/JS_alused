@@ -1,43 +1,24 @@
-const form=document.querySelector("form");
-const taskInput=document.querySelector("#task");
-const heading=document.querySelector("h4");
-const li=document.createElement("li");
-const list=document.querySelector("ul");
-const taskList = document.querySelector("ul");
+// event elements
+const taskList = document.querySelector('ul');
+const deleteAllButton = document.getElementById('delete-all');
+
+// click elemendi kustutamiseks
 taskList.addEventListener("click", deleteTask);
+deleteAllButton.addEventListener("click", deleteAll);
 
-li.className="collection-item";
+function deleteTask(e) {
+if(e.target.textContent === "X") {
+if(confirm("Are you sure you want to delete this task?")){
+e.target.parentElement.remove();
+		}
+	}
+}
 
-taskInput.value = "";
 
-form.addEventListener("submit", addTask);
-//taskInput.addEventListener("keydown", runEvent);
-//taskInput.addEventListener("keyup", runEvent);
-//taskInput.addEventListener("keypress", runEvent);
-//taskInput.addEventListener("focus", runEvent);
-//taskInput.addEventListener("blur", runEvent);
-//taskInput.addEventListener("cut", runEvent);
-//taskInput.addEventListener("paste", runEvent);
-//taskInput.addEventListener("input", runEvent);
-
-function addTask(e){
-	//body...
-
-	//
-	li.appendChild(document.createTextNode(taskInput.value));
-	const link=document.createElement("a");
-	link.className="secondary-content";
-	link.appendChild(document.createTextNode("X"));
-	link.setAttribute("href", "#");
-	li.appendChild(link);
-	list.appendChild(li);
-	//console.log(li);
-	e.preventDefault();
-}	
-function deleteTask(e){
-	if(e.target.textContent === "X"){
-		if(confirm("Kas olete kindel, et tahate seda kustutada?")){
-			e.target.parentElement.remove();
+function deleteAll(e) {
+if(e.target.id === "delete-all"){
+if(confirm("Are you sure you want to delete all tasks?")){
+taskList.innerHTML = "";
 		}
 	}
 }
