@@ -3,6 +3,8 @@ const taskInput=document.querySelector("#task");
 const heading=document.querySelector("h4");
 const li=document.createElement("li");
 const list=document.querySelector("ul");
+const taskList = document.querySelector("ul");
+taskList.addEventListener("click", deleteTask);
 
 li.className="collection-item";
 
@@ -32,3 +34,10 @@ function addTask(e){
 	//console.log(li);
 	e.preventDefault();
 }	
+function deleteTask(e){
+	if(e.target.textContent === "X"){
+		if(confirm("Kas olete kindel, et tahate seda kustutada?")){
+			e.target.parentElement.remove();
+		}
+	}
+}
