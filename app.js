@@ -1,4 +1,4 @@
-onst taskList = document.querySelector('ul');
+const taskList = document.querySelector('ul');
 const form = document.querySelector('form');
 const taskInput = document.querySelector('#task');
 const delAllBtn = document.querySelector('#del-tasks');
@@ -114,3 +114,4 @@ function getTasks(e){
 
 	taskList.appendChild(li);
   });
+}
